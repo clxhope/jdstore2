@@ -1,6 +1,6 @@
 # require 'carrierwave/storage/abstract'
 # require 'carrierwave/storage/file'
-# require 'carrierwave/storage/fog'
+# require 'carrierwave/storage/fog'   #这部分是使用aws部署heroku时才需要用到的。
 
 CarrierWave.configure do |config|
   config.storage             = :qiniu

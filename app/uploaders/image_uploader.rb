@@ -13,8 +13,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # if Rails.env.production?
   #   storage :fog
   # elsif Rails.env.development?
-  #   storage :qiniu
-  # end
+  #   storage :file
+  # end     #“这个判断式是使用aws部署heroku时才需要用的”
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:

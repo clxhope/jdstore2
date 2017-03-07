@@ -1,3 +1,3 @@
 # module Fog
 #   # :D
-# end
+# end    #这部分是使用aws部署heroku时才需要用的。
