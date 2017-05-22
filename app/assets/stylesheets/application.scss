@@ -1,4 +1,6 @@
-/*
+
+
+*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -19,13 +21,170 @@
 @import "font-awesome";
 
 
-/*-----    登陆及注册页面    -----*/
- .form-control{
-   height: 50px;  /*修改文本框的高度*/
- }
 
  .login{
    background-image: url("https://ws1.sinaimg.cn/large/006tNbRwgy1ffrxb5a13jj31kw0zkdtt.jpg");
    background-size: cover;
    background-position: top center;
  }
+=======
+body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+    padding-top: 50px;
+}
+h3, h4 {
+    margin: 10px 0 40px 0;
+    letter-spacing: 10px;
+    font-size: 20px;
+    color: #000;
+}
+.container {
+    padding: 80px 150px;  //资讯栏位边距
+}
+.person {
+    border: 5px solid transparent;
+    margin-bottom: 10px;   //热款下拉文字与图片间距
+    width: 100%;   //热款图片大小
+    height: 100%;
+}
+.person:hover {
+    border-color: #f1f1f1;   //热款外圈颜色
+}
+
+
+ // <!--轮播左右键阴影设置 -->
+.carousel-control.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+.carousel-control.left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+.carousel-caption h3 {
+    color: #fff !important;
+}
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+.bg-1 {
+    background: #000;
+    color: #bdbdbd;
+}
+.bg-1 h3 {color: #fff;}
+.bg-1 p {font-style: italic;}
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+.modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+.modal-header, .modal-body {
+    padding: 40px 50px;
+}
+
+ // <!--navbar -->
+.navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #000;
+    border: 0;
+    font-size: 13px !important;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #d5d5d5 !important;
+}
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar-brand > img {
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 10px; //图片和链接文字拉开一点距离
+    width: 90px; //定制图片宽度
+    height: 42px; //定制图片高度
+    margin-bottom: -50px;
+    margin-top: -50px;
+}
+.nav-tabs li a {
+    color: #000;
+}
+
+
+ // <!--下拉菜单-->
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+}
+.dropdown-menu li a {
+    color: #000 !important;
+}
+.dropdown-menu li a:hover {
+    background-color: gray !important;
+}
+
+
+ // <!--footer -->
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 50px;
+}
+footer a {
+    color: #f5f5f5;
+}
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+.form-control {
+    border-radius: 0;
+}
+textarea {
+    resize: none;
+}
