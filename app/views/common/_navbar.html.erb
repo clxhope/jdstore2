@@ -9,7 +9,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><img src='<%= image_url 'http://a3.qpic.cn/psb?/87cef6b7-ff54-484c-886d-3d56fb9b0ad7/7AUKkMJQVxHxOF2YiQ1ikhODyHH8zbrzZOQFEy.TJuY!/b/dGoBAAAAAAAA&bo=mgaAApEelAsDCSI!&rf=viewer_4' %>' >Metso</a>
+      <a class="navbar-brand" href="/">
+        <img alt="Brand" src='<%= image_url 'http://a3.qpic.cn/psb?/87cef6b7-ff54-484c-886d-3d56fb9b0ad7/7AUKkMJQVxHxOF2YiQ1ikhODyHH8zbrzZOQFEy.TJuY!/b/dGoBAAAAAAAA&bo=mgaAApEelAsDCSI!&rf=viewer_4' %>' >
+        Metso
+      </a>
 
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -19,6 +22,11 @@
         <li><a href="/products">所有车型</a></li>
         <li><a href="#news">综合资讯</a></li>
         <li><a href="#contact">联系我们</a></li>
+        <li>
+          <%= link_to "#" do  %>
+            <i class="fa fa-shopping-cart"> </i> (<%= current_cart.products.count %>)
+          <% end %>
+        </li>
         <% if !current_user %>
         <li><%= link_to("注册", new_user_registration_path) %> </li>
         <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
