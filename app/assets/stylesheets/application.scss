@@ -17,3 +17,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+
+/*-----    登陆及注册页面    -----*/
+ .form-control{
+   height: 50px;  /*修改文本框的高度*/
+ }
+
+ .login{
+   background-image: url("https://ws1.sinaimg.cn/large/006tNbRwgy1ffrxb5a13jj31kw0zkdtt.jpg");
+   background-size: cover;
+   background-position: top center;
+ }
