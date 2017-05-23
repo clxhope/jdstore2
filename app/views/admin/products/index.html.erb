@@ -34,7 +34,13 @@
           <%= product.price %>
         </td>
         <td>
-          <%= link_to("Edit", edit_admin_product_path(product)) %>
+          <%= link_to edit_admin_product_path(product) do %>
+          <i class="fa fa-pencil"></i>
+          <% end %>
+
+          <%= link_to admin_product_path(product), method: :delete do %>
+          <i class="fa fa-trash"></i>
+          <% end %>
         </td>
       </tr>
       <% end %>

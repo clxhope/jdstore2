@@ -23,8 +23,8 @@
         <li><a href="#news">综合资讯</a></li>
         <li><a href="#contact">联系我们</a></li>
         <li>
-          <%= link_to "#" do  %>
-            <i class="fa fa-shopping-cart"> </i> (<%= current_cart.products.count %>)
+          <%= link_to carts_path do  %>
+            <i class="fa fa-shopping-cart"> </i>(<%= current_cart.products.count %>)
           <% end %>
         </li>
         <% if !current_user %>
