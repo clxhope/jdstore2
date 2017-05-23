@@ -1,15 +1,17 @@
 <link rel="stylesheet" type="text/css" href="css/demo.css" />
 <link rel="stylesheet" type="text/css" href="css/style_common.css" />
 <link rel="stylesheet" type="text/css" href="css/style3.css" />
-  <div class="allgoods" style="background:#000">
-    <% @products.each do |product| %>
-      <div class="view view-third">
-        <%= image_tag(product.image.thumb.url,) %>
-          <div class="mask">
-            <h2> <%= product.title %> </h2><br>
-            <p>  xs<%= product.price %> </p>
-         <%= link_to("查看详情",  product_path(product),  :class => "info") %>
-          </div>
-      </div>
-   <% end %>
- </div>
+
+
+    <div class="allgoods" style="background:#000">
+      <% @products.each do |product| %>
+        <div class="view view-third">
+          <%= image_tag(product.image.thumb.url,) %>
+            <div class="mask">
+              <h2> <%= product.title %> </h2><br>
+              <p>  xs<%= product.price %> </p>
+           <%= link_to("查看详情",  product_path(product),  :class => "info") %>
+            </div>
+        </div>
+     <% end %>
+   </div>

@@ -12,7 +12,7 @@ if User.find_by(email:"admin@test.com").nil?
     u.password_confirmation = "123456"
     u.is_admin = true
     u.save
-    pusts "Admin 已经建立好了， 账号为#{u.email}, 密码为#{u.password}"
+    puts "Admin 已经建立好了， 账号为#{u.email}, 密码为#{u.password}"
   else
     puts "Admin 已经建立过了，脚本跳过该步骤。"
   end
@@ -122,5 +122,3 @@ if User.find_by(email:"admin@test.com").nil?
      quantity: 6,
      image: open("http://ww4.sinaimg.cn/large/006tKfTcgy1ffvcwaznncj30sg0lcgoq.jpg")
   )
-
-  

@@ -15,8 +15,9 @@
 //= require turbolinks
 //= require bootstrap/alert
 //= require bootstrap/dropdown
-//= require_tree .
 //= require bootstrap-sprockets
+//= require_tree .
+
 
 
 $(document).ready(function(){

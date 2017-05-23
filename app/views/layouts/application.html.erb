@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>Jdstore</title>
     <!--标签logo-->
-    <link rel="shortcut icon" type="image/x-icon" href="https://ww4.sinaimg.cn/large/006tNc79gy1ffrxwc1fghj31kw0lkapn.jpg"/>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="https://ww4.sinaimg.cn/large/006tNc79gy1ffrxwc1fghj31kw0lkapn.jpg"/> -->
 
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>  -->
-
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
@@ -23,5 +22,5 @@
 
   <%= render "common/footer" %>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true  %>
+
 </html>
