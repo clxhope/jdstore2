@@ -1,8 +1,8 @@
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style_common.css" />
-        <link rel="stylesheet" type="text/css" href="css/style3.css" />
-<!-- <div class="row" style=" background-image:url('https://ww3.sinaimg.cn/large/006tKfTcly1ffodm4jeltj31ao0p00ys.jpg');"> -->
-      <% @products.each do |product| %>
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/style_common.css" />
+<link rel="stylesheet" type="text/css" href="css/style3.css" />
+  <div class="allgoods">
+    <% @products.each do |product| %>
       <div class="view view-third">
         <%= image_tag(product.image.thumb.url,) %>
           <div class="mask">
@@ -12,4 +12,4 @@
           </div>
       </div>
    <% end %>
-<!-- </div> -->
+ </div>

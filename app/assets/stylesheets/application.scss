@@ -18,6 +18,14 @@
 @import "bootstrap";
 @import "font-awesome";
 
+/*-------全部商品页面-------*/
+
+ .allgoods{
+   background-image: url('https://ww3.sinaimg.cn/large/006tKfTcly1ffodm4jeltj31ao0p00ys.jpg');
+   background-size: cover;
+ }
+
+
 
 html {
    position: relative;
@@ -27,6 +35,9 @@ html {
  body {
    /* Margin bottom by footer height */
    margin-bottom: 100px;
+   padding-top: 50px;
+   font: 400 15px/1.8 Lato, sans-serif;
+   color: #777;
  }
 
 
@@ -36,11 +47,8 @@ html {
    background-position: top center;
  }
 
-body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-    padding-top: 50px;
-}
+
+/*-------分栏内容设置-------*/
 h3, h4 {
     margin: 10px 0 40px 0;
     letter-spacing: 10px;
@@ -77,6 +85,7 @@ h3, h4 {
 .carousel-caption h3 {
     color: #fff !important;
 }
+
 @media (max-width: 600px) {
   .carousel-caption {
     display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
@@ -112,6 +121,7 @@ h3, h4 {
     border-radius: 0;
     transition: .2s;
 }
+ /*-------资讯栏按钮------*/
 .btn:hover, .btn:focus {
     border: 1px solid #333;
     background-color: #fff;
