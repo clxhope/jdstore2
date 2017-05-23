@@ -10,18 +10,16 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <img alt="Brand" src='<%= image_url 'http://a3.qpic.cn/psb?/87cef6b7-ff54-484c-886d-3d56fb9b0ad7/7AUKkMJQVxHxOF2YiQ1ikhODyHH8zbrzZOQFEy.TJuY!/b/dGoBAAAAAAAA&bo=mgaAApEelAsDCSI!&rf=viewer_4' %>' >
-        Metso
-      </a>
-
+        <img alt="Brand" src='<%= image_url 'logo.png' %>' > Metso </a>
     </div>
+
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/">首页</a></li>
         <li><a href="#HOT">新车推荐</a></li>
-        <li><a href="/products">所有车型</a></li>
         <li><a href="#news">综合资讯</a></li>
-        <li><a href="#contact">联系我们</a></li>
+        <li><a href="/products">全部车型</a></li>
+        <li><a href="#contact">关于我们</a></li>
         <li>
           <%= link_to carts_path do  %>
             <i class="fa fa-shopping-cart"> </i>(<%= current_cart.products.count %>)

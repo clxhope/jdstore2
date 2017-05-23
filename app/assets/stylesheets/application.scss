@@ -18,6 +18,22 @@
 @import "bootstrap";
 @import "font-awesome";
 
+/*-------全部商品页面-------*/
+
+
+
+html {
+   position: relative;
+   min-height: 100%;
+ }
+
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 100px;
+   padding-top: 50px;
+   font: 400 15px/1.8 Lato, sans-serif;
+   color: #777;
+ }
 
 /*-----注册登陆页面------*/
  .login{
@@ -25,6 +41,7 @@
    background-size: cover;
    background-position: top center;
  }
+
 
  h2.signin{
    margin-bottom: 30px;
@@ -36,6 +53,10 @@ body {
     color: #777;
     padding-top: 50px;
 }
+
+
+
+
 h3, h4 {
     margin: 10px 0 40px 0;
     letter-spacing: 10px;
@@ -66,19 +87,14 @@ h3, h4 {
 }
 
 .carousel-inner img {
-    width: 100%; /* Set width to 100% */
+    width: 100%; /* 轮播图片100% */
     margin: auto;
 }
-.carousel-caption h3 {
-    color: #fff !important;
-}
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
-}
+
+
+
 .bg-1 {
-    background: #000;
+    background: #000;  //资讯栏背景色
     color: #bdbdbd;
 }
 .bg-1 h3 {color: #fff;}
@@ -100,6 +116,8 @@ h3, h4 {
     margin-top: 15px;
     color: #555;
 }
+
+ /*-------资讯栏按钮------*/
 .btn {
     padding: 10px 20px;
     background-color: #333;
@@ -173,10 +191,14 @@ h3, h4 {
 
 
  // <!--footer -->
-footer {
-    background-color: #2d2d30;
+.footer {
+    background-color: #000;
     color: #f5f5f5;
-    padding: 50px;
+    padding: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
 }
 footer a {
     color: #f5f5f5;

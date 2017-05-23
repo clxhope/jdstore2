@@ -1,20 +1,15 @@
-
-<div id="band" class="container">
-  <div class="row">
-    <div class="col-sm-4">
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/style_common.css" />
+<link rel="stylesheet" type="text/css" href="css/style3.css" />
+  <div class="allgoods" style="background:#000">
     <% @products.each do |product| %>
-
-      <%= link_to product_path(product) do %>
-      <% if product.image.present? %>
-      <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-      <% else %>
-      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-      <% end %>
-      <% end %>
-      <strong>  <%= product.title %> </strong><br>
-     ¥ <%= product.price %><br>
-<button class="btn">查看详情</button>
-    </div>
-    <% end %>
-  </div>
-</div>
+      <div class="view view-third">
+        <%= image_tag(product.image.thumb.url,) %>
+          <div class="mask">
+            <h2> <%= product.title %> </h2><br>
+            <p>  xs<%= product.price %> </p>
+         <%= link_to("查看详情",  product_path(product),  :class => "info") %>
+          </div>
+      </div>
+   <% end %>
+ </div>
