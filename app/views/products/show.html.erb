@@ -8,11 +8,6 @@
   </div>
   <div class="col-md-6">
     <h2> <%= @product.title %></h2>
-    <div style="height:100px;">
-      <p>
-        <%= @product.description %>
-      </p>
-    </div>
     <div> 数量 : <%= @product.quantity %></div>
     <div class="product-price"> ¥ <%= @product.price %></div>
     <div class="pull-right">
@@ -23,4 +18,29 @@
        <% end %>
        </div>
   </div>
+</div>
+<div class="col-md-6 col-md-offset-3">
+<h3 class="text-center">From The Blog</h3>
+ <ul class="nav nav-tabs">
+   <li class="active"><a data-toggle="tab" href="#home">车型介绍</a></li>
+   <li><a data-toggle="tab" href="#menu1">参数</a></li>
+   <li><a data-toggle="tab" href="#menu2">配送说明</a></li>
+ </ul>
+
+ <div class="tab-content">
+   <div id="home" class="tab-pane fade in active">
+     <p>
+       <%= @product.description %>
+     </p>
+   </div>
+   <div id="menu1" class="tab-pane fade">
+     <h2>Chandler Bing, Guitarist</h2>
+     <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+   </div>
+   <div id="menu2" class="tab-pane fade">
+     <h2>Peter Griffin, Bass player</h2>
+     <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+   </div>
+ </div>
+</div>
 </div>
