@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="css/demo.css" />
 <link rel="stylesheet" type="text/css" href="css/style_common.css" />
 <link rel="stylesheet" type="text/css" href="css/style3.css" />
-  <div class="allgoods">
+  <div class="allgoods" style="background:#000">
     <% @products.each do |product| %>
       <div class="view view-third">
         <%= image_tag(product.image.thumb.url,) %>
