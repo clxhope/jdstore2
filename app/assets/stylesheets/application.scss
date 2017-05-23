@@ -19,12 +19,17 @@
 @import "font-awesome";
 
 
-
+/*-----注册登陆页面------*/
  .login{
-   background-image: url("https://ws1.sinaimg.cn/large/006tNbRwgy1ffrxb5a13jj31kw0zkdtt.jpg");
+   background-image: url("http://ww1.sinaimg.cn/large/006tKfTcgy1ffvfnjcmfvj31kw192atl.jpg");
    background-size: cover;
    background-position: top center;
  }
+
+ h2.signin{
+   margin-bottom: 30px;
+ }
+
 
 body {
     font: 400 15px/1.8 Lato, sans-serif;
