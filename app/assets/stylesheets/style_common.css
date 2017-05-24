@@ -1,7 +1,7 @@
 .view {
    width: 300px;      /*商品图片尺寸*/
    height: 200px;
-   margin: 27px;     /*商品距离*/
+   margin: 42px;     /*商品距离*/
    float: left;
    border: 10px solid #fff;    /*商品缩略图边框距离*/
    overflow: hidden;
@@ -13,32 +13,29 @@
    cursor: default;
    background: #fff
 }
-.view .mask,.view .content {
+.view .mask,.view .content {    /* 控制特效阴影部分 */
    width: 300px;
-   height: 250px;
+   height: 200px;
    position: absolute;
    overflow: hidden;
    top: 0;
    left: 0;
 }
-.view img {
-   display: block;
-   position: relative;
-}
+
 .view h2 {
    text-transform: uppercase;
    color: #fff;
    text-align: center;
    position: relative;
    font-size: 17px;
-   padding: 10px;
+   padding: 0px;
    background: rgba(0, 0, 0, 0.8);
    margin: 20px 0 0 0;
 }
 .view p {
    font-family: Georgia, serif;
    font-style: italic;
-   font-size: 12px;
+   font-size: 18px;
    position: relative;
    color: #fff;
    padding: 10px 20px 20px;
