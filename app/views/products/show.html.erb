@@ -1,5 +1,5 @@
 <br>
-  <div class="col-md-6 col-md-offset-2">
+<div class="col-md-6 col-md-offset-2">
     <% if @product.image.present? %>
     <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
     <% else %>
@@ -16,35 +16,31 @@
        <% else %>
          已销售一空，无法购买
        <% end %>
-
-  </div>
+</div>
 
 
 
 <div class="col-md-6 col-md-offset-3">
-  <h3 class="text-center">商品叙述/配送服务</h3>
-   <ul class="nav nav-tabs">
-     <li class="active"><a data-toggle="tab" href="#home">资讯</a></li>
-     <li><a data-toggle="tab" href="#menu1">参数</a></li>
-     <li><a data-toggle="tab" href="#menu2">配送说明</a></li>
-  </ul>
+      <h3 class="text-center">商品叙述/配送服务</h3>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">资讯</a></li>
+            <li><a data-toggle="tab" href="#menu1">参数</a></li>
+            <li><a data-toggle="tab" href="#menu2">配送说明</a></li>
+        </ul>
 
-   <div class="tab-content">
+  <div class="tab-content">
      <div id="home" class="tab-pane fade in active">
         <h2>车况概览</h2>
-       <p>
-         <%= @product.description %>
-       </p>
+        <p><%= @product.description %></p>
      </div>
-     <div id="menu1" class="tab-pane fade">
-       <h2>参数配置</h2>
-       <p>工程修复中,敬请谅解！</p>
-       <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvdwc6h04j30rs0j3t9j.jpg" width="700" height="500"> </img>
-     </div>
-     <div id="menu2" class="tab-pane fade">
-       <h2>专机运输,用心呵护</h2>
-       <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvcx0p4p7j30sg0g0aaw.jpg" width="700" height="400"> </img>
-       <p></p>
-     </div>
+        <div id="menu1" class="tab-pane fade">
+          <h2>参数配置</h2>
+          <p>工程修复中,敬请谅解！</p>
+          <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvdwc6h04j30rs0j3t9j.jpg" width="700" height="500"> </img>
+        </div>
+          <div id="menu2" class="tab-pane fade">
+              <h2>专机运输,用心呵护</h2>
+              <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvcx0p4p7j30sg0g0aaw.jpg" width="700" height="400"> </img>
+          </div>
    </div>
 </div>

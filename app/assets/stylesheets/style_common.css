@@ -1,10 +1,10 @@
 .view {
    width: 300px;      /*商品图片尺寸*/
    height: 200px;
-   margin: 42px;     /*商品距离*/
-   float: left;
+   margin: 10px;     /*商品距离*/
+   float: center;
    border: 10px solid #fff;    /*商品缩略图边框距离*/
-   overflow: hidden;
+   overflow: hidden;        /*商品缩略图溢出隐藏*/
    position: relative;
    text-align: center;
    -webkit-box-shadow: 3px 1px 2px #e6e6e6;
