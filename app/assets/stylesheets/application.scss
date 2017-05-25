@@ -47,15 +47,7 @@ html {
    margin-bottom: 30px;
  }
 
-/*----------------*/
-
-body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-    padding-top: 50px;
-}
-
-
+/*-------资讯栏---------*/
 
 
 h3, h4 {
@@ -96,7 +88,7 @@ h3, h4 {
 
 .bg-1 {
     background: #000;  //资讯栏背景色
-    color: #bdbdbd;
+    color: #bdbdbd;   //资讯栏字体色
 }
 .bg-1 h3 {color: #fff;}
 .bg-1 p {font-style: italic;}
@@ -118,15 +110,15 @@ h3, h4 {
     color: #555;
 }
 
- /*-------资讯栏按钮------*/
-.btn {
+ /*-------按钮------*/
+.zbtn {
     padding: 10px 20px;
     background-color: #333;
     color: #f1f1f1;
     border-radius: 0;
     transition: .2s;
 }
-.btn:hover, .btn:focus {
+.zbtn:hover, .zbtn:focus {
     border: 1px solid #333;
     background-color: #fff;
     color: #000;
