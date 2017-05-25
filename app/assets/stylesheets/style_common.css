@@ -2,7 +2,7 @@
    width: 300px;      /*商品图片尺寸*/
    height: 200px;
    margin: 10px;     /*商品距离*/
-   float: center;
+   float: left;
    border: 10px solid #fff;    /*商品缩略图边框距离*/
    overflow: hidden;        /*商品缩略图溢出隐藏*/
    position: relative;
