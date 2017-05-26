@@ -30,7 +30,6 @@ html {
  body {
    /* Margin bottom by footer height */
    margin-bottom: 100px;
-   padding-top: 50px;
    font: 400 15px/1.8 Lato, sans-serif;
    color: #777;
  }
@@ -47,6 +46,12 @@ html {
    margin-bottom: 30px;
  }
 
+
+/*-------块居中---------*/
+ .content1{
+              background: #ffffff;
+              text-align: right;
+}
 /*-------资讯栏---------*/
 
 
@@ -57,7 +62,7 @@ h3, h4 {
     color: #000;
 }
 .container {
-    padding: 80px 150px;  //资讯栏位边距
+    padding: 100px 150px;  //资讯栏位边距
 }
 .person {
     border: 5px solid transparent;

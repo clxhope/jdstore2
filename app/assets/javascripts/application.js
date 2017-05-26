@@ -16,35 +16,34 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap-sprockets
+//= require index.js
 //= require_tree .
 
 
 
 $(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip();
+  var $cont = document.querySelector('.cont');
+  var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+  var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
 
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  setTimeout(function() {
+    $cont.classList.remove('s--inactive');
+  }, 200);
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
+  $elsArr.forEach(function($el) {
+    $el.addEventListener('click', function() {
+      if (this.classList.contains('s--active')) return;
+      $cont.classList.add('s--el-active');
+      this.classList.add('s--active');
+    });
   });
+
+  $closeBtnsArr.forEach(function($btn) {
+    $btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      $cont.classList.remove('s--el-active');
+      document.querySelector('.el.s--active').classList.remove('s--active');
+    });
+  });
+
 })
