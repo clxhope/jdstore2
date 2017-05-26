@@ -16,6 +16,7 @@
        <% else %>
          已销售一空，无法购买
        <% end %>
+       <%= link_to("直接购买", checkout_carts_path, method: :post, class: "btn btn-lg btn-default") %>
 </div>
 
 
