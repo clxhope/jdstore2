@@ -19,7 +19,8 @@
   </div>
 
   <div class="group">
-    <%= f.input :image, as: :file %>
+    <%= f.label :avatar, as: :file %><br>
+    <%= f.file_field :avatar, :multiple => true, name:"photos[avatar][]" %>("请上传4张图片")
   </div>
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>

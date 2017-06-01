@@ -26,7 +26,7 @@
               <tr>
                 <td>
                   <%= link_to product_path(cart_item.product) do %>
-                  <%= image_tag(cart_item.product.image.thumb.url, size:"200x150") %>
+                  <%= image_tag(cart_item.product.photos[0].avatar.thumb.url, size:"200x150") %>
                   <% end %>
                 </td>
                 <td style="text-align:left;vertical-align:middle;">

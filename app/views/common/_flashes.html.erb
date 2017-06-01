@@ -1,8 +1,9 @@
-<!--暂时关掉了flash栏 <% if flash.any? %>
+<!-- # 暂时关掉了flash栏 -->
+ <% if flash.any? %>
 <% user_facing_flashes.each do |key, value| %>
 <div class="alert alert-dimissable alert-<%= flash_class(key) %>">
   <button class="close" data-dismiss="alert">×</button>
   <%= value %>
 </div>
 <% end %>
-<% end %> -->
+<% end %>

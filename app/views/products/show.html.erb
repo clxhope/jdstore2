@@ -1,11 +1,27 @@
 <br>
 <div class="col-md-6 col-md-offset-2">
-    <% if @product.image.present? %>
-    <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-    <% else %>
-    <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
-  </div>
+  <% if @product.photos.present? %>
+   <div class="tab-content show-picture">
+     <% @product.photos.each_with_index do |p,index| %>
+       <% if index <5 %>
+        <div class= "tab-pane <%= render_active(index) %>" id="<%= index %>"><%= image_tag p.avatar.medium.url %>
+        </div>
+       <% end %>
+     <% end %>
+   </div>
+
+   <ul class="show-photo-xsmall-box nav nav-tabs">
+     <% @product.photos.each_with_index do |p,index| %>
+       <% if index <5 %>
+         <li><a href="#<%= index %>" data-toggle="tab"><%= image_tag p.avatar.small.url%></a></li>
+       <% end %>
+     <% end %>
+   </ul>
+  <% else %>
+    <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
+  <% end %>
+</div>
+
   <br><br><br>
     <h2> <%= @product.title %></h2>
     <div> 库存 : <%= @product.quantity %> 辆</div>
@@ -25,7 +41,7 @@
          已销售一空，无法购买
        <% end %>
        <%= link_to("直接购买", checkout_carts_path, method: :post, class: "btn btn-lg btn-default") %>
-</div>
+   </div>
 
 
 <div class="col-md-6 col-md-offset-3">
@@ -46,9 +62,9 @@
           <p>工程修复中,敬请谅解！</p>
           <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvdwc6h04j30rs0j3t9j.jpg" width="700" height="500"> </img>
         </div>
-          <div id="menu2" class="tab-pane fade">
-              <h2>专机运输,用心呵护</h2>
-              <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvcx0p4p7j30sg0g0aaw.jpg" width="700" height="400"> </img>
-          </div>
+        <div id="menu2" class="tab-pane fade">
+            <h2>专机运输,用心呵护</h2>
+            <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvcx0p4p7j30sg0g0aaw.jpg" width="700" height="400"> </img>
+        </div>
    </div>
 </div>

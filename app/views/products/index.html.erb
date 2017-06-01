@@ -14,7 +14,7 @@
     <% @products.each do |product| %>
       <div class="col-md-3">
         <div class="view view-third">
-          <%= image_tag(product.image.thumb.url,) %>
+          <%= image_tag(product.photos[0].avatar.thumb.url) %>
             <div class="mask">
               <h2> <%= product.title %> </h2><br>
               <p>  $:<%= product.price %> </p>

@@ -9,15 +9,26 @@ class Admin::ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def show
+    @product = Product.find(params[:id])
+    @photos = @product.photos.all
+  end
+
   def new
     @product = Product.new
+    @photo = @product.photos.build
   end
 
   def create
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to admin_products_path
+      if params[:photos] != nil
+        params[:photos]["avatar"].each do |a|
+          @photo = @product.photos.create(:avatar => a)
+        end
+      end
+      redirect_to admin_products_path, notice: "创建成功！"
     else
       render :new
     end
@@ -30,11 +41,18 @@ class Admin::ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    if @product.update(product_params)
-      redirect_to admin_products_path
-    else
-      render :edit
-    end
+    if params[:photos] != nil
+      @product.photos.destroy_all  # 如果有新参数传过来，就删掉原来的图，以新的为准
+      params[:photos]["avatar"].each do |a|
+        @product.photos.create(:avatar => a)
+      end
+      @product.update(product_params)
+      redirect_to admin_products_path, notice: "更新成功!"
+    elsif @product.update(product_params)
+        redirect_to admin_products_path, notice: "更新成功!"
+      else
+        render :edit
+      end
   end
 
   def destroy
@@ -47,7 +65,7 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image)
+    params.require(:product).permit(:title, :description, :quantity, :price, :image, {avatars: []})
   end
 
 end
