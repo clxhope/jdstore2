@@ -49,10 +49,10 @@ class Admin::ProductsController < ApplicationController
       @product.update(product_params)
       redirect_to admin_products_path, notice: "更新成功!"
     elsif @product.update(product_params)
-        redirect_to admin_products_path, notice: "更新成功!"
-      else
-        render :edit
-      end
+      redirect_to admin_products_path, notice: "更新成功!"
+    else
+      render :edit
+    end
   end
 
   def destroy
