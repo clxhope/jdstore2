@@ -1,9 +1,12 @@
+body {
+  padding-top: 50px;
+}
 .view {
    width: 300px;      /*商品图片尺寸*/
    height: 200px;
-   margin: 10px;     /*商品距离*/
+   margin: 40px;     /*商品距离*/
    float: left;
-   border: 10px solid #fff;    /*商品缩略图边框距离*/
+   border: 6px solid #fff;    /*商品缩略图边框距离*/
    overflow: hidden;        /*商品缩略图溢出隐藏*/
    position: relative;
    text-align: center;

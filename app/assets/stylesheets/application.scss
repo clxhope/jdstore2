@@ -75,91 +75,9 @@ html {
               background: #ffffff;
               text-align: right;
 }
-/*-------资讯栏---------*/
-
-
-h3, h4 {
-    margin: 10px 0 40px 0;
-    letter-spacing: 10px;
-    font-size: 20px;
-    color: #000;
-}
-.container {
-    padding: 100px 150px;  //资讯栏位边距
-}
-.person {
-    border: 5px solid transparent;
-    margin-bottom: 10px;   //热款下拉文字与图片间距
-    width: 100%;   //热款图片大小
-    height: 100%;
-}
-.person:hover {
-    border-color: #f1f1f1;   //热款外圈颜色
-}
-
-
- // <!--轮播左右键阴影设置 -->
-.carousel-control.right {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0001) 100%);
-}
-
-.carousel-control.left {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0001) 100%);
-}
-
-.carousel-inner img {
-    width: 100%; /* 轮播图片100% */
-    margin: auto;
-}
 
 
 
-.bg-1 {
-    background: #000;  //资讯栏背景色
-    color: #bdbdbd;   //资讯栏字体色
-}
-.bg-1 h3 {color: #fff;}
-.bg-1 p {font-style: italic;}
-.list-group-item:first-child {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-}
-.list-group-item:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-}
-.thumbnail p {
-    margin-top: 15px;
-    color: #555;
-}
-
- /*-------按钮------*/
-.zbtn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
-}
-.zbtn:hover, .zbtn:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
-}
-.modal-header, h4, .close {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 30px;
-}
-.modal-header, .modal-body {
-    padding: 40px 50px;
-}
 
  // <!--navbar -->
 .navbar {
