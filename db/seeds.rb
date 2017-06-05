@@ -57,75 +57,75 @@ if User.find_by(email:"admin@test.com").nil?
 
   puts "13 products without pics created."
 
-  image1 = [
-    "http://ww4.sinaimg.cn/large/006tNbRwgy1fg6m7ot5ihj30sc0e7130.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8eg4m1wrj30sg0lcwth.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8en493p6j30sg0lc460.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8ekrvn36j30sg0lcdph.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8eiit9nuj30sg0lcwii.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ep8g4h1j30sg0kaq8r.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8eqqle6sj30sg0lcdiz.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8esktfn7j30sg0lcwhb.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8ettq1lkj30sg0lc0vw.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8eutswzfj30sg0lcmy5.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ewbpsyrj30sg0lcqcw.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8f80sb7jj30sg0lcdmb.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8f92c484j30sg0lcn0c.jpg"
-  ]
-
-  image2 = [
-    "http://ww1.sinaimg.cn/large/006tNbRwgy1fg60yaj0c0j30sg0g9taf.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8ehejntcj30sg0lcqca.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8en6db4uj30sg0lc7b9.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ek6bctdj30sg0lc468.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8einq4bzj30sg0lcaeh.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8epc4zo8j30sg0kan58.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8eqs0qwcj30sg0lc76d.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8esmwqquj30sg0lcdis.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8etso4qoj30sg0lcadz.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8euy6s7pj30sg0lc42z.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8ewiovzwj30sg0lc12k.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8f7wjolzj30sg0lcwlr.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8f90asa7j30sg0lctcx.jpg"
-  ]
-
-  image3 = [
-    "http://ww2.sinaimg.cn/large/006tNbRwgy1fg60w2k4r5j30sg0lcgnw.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8ehejntcj30sg0lcqca.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8enaex0cj30sg0lcdnm.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8ekchl5ij30sg0lc0z4.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8eik94dlj30sg0lcwix.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8ep72ze0j30sg0ka430.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8eqsdc6aj30sg0lcjt1.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8eslw12dj30sg0lc412.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8etqyetmj30sg0lc40i.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8euvlbxgj30sg0lctc6.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ewfahsmj30sg0lc12s.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8f84gzxlj30sg0lc10w.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8f8ynpyrj30sg0lcjty.jpg"
-  ]
-
-  image4 = [
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8fr2671zj318g0xc0wh.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8egva0wdj30sg0lctjr.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8en1ci1pj30sg0lcahf.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8ekrvn36j30sg0lcdph.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8eihjtcuj30sg0lcdmg.jpg",
-    "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ep5efdjj30sg0ka7gj.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8eqpn8ecj30sg0lcq4t.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8esjv9l5j30sg0lcgnt.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8etqllwtj30sg0lcgnm.jpg",
-    "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8euu17goj30sg0lc3z9.jpg",
-    "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8ew8y97zj30sg0lctij.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8f7t1un2j30sg0lctgg.jpg",
-    "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8f8x616gj30sg0lcgoq.jpg"
-  ]
-
-  create_photos = for i in 0..12 do
-    Photo.create!(product_id: (i+1),avatar: open(image1[i]))
-    Photo.create!(product_id: (i+1),avatar: open(image2[i]))
-    Photo.create!(product_id: (i+1),avatar: open(image3[i]))
-    Photo.create!(product_id: (i+1),avatar: open(image4[i]))
-  end
-
-  puts "13 photos created."
+  # image1 = [
+  #   "http://ww4.sinaimg.cn/large/006tNbRwgy1fg6m7ot5ihj30sc0e7130.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8eg4m1wrj30sg0lcwth.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8en493p6j30sg0lc460.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8ekrvn36j30sg0lcdph.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8eiit9nuj30sg0lcwii.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ep8g4h1j30sg0kaq8r.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8eqqle6sj30sg0lcdiz.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8esktfn7j30sg0lcwhb.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8ettq1lkj30sg0lc0vw.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8eutswzfj30sg0lcmy5.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ewbpsyrj30sg0lcqcw.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8f80sb7jj30sg0lcdmb.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8f92c484j30sg0lcn0c.jpg"
+  # ]
+  #
+  # image2 = [
+  #   "http://ww1.sinaimg.cn/large/006tNbRwgy1fg60yaj0c0j30sg0g9taf.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8ehejntcj30sg0lcqca.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8en6db4uj30sg0lc7b9.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ek6bctdj30sg0lc468.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8einq4bzj30sg0lcaeh.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8epc4zo8j30sg0kan58.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8eqs0qwcj30sg0lc76d.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8esmwqquj30sg0lcdis.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8etso4qoj30sg0lcadz.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8euy6s7pj30sg0lc42z.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8ewiovzwj30sg0lc12k.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8f7wjolzj30sg0lcwlr.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8f90asa7j30sg0lctcx.jpg"
+  # ]
+  #
+  # image3 = [
+  #   "http://ww2.sinaimg.cn/large/006tNbRwgy1fg60w2k4r5j30sg0lcgnw.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8ehejntcj30sg0lcqca.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8enaex0cj30sg0lcdnm.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8ekchl5ij30sg0lc0z4.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8eik94dlj30sg0lcwix.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8ep72ze0j30sg0ka430.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8eqsdc6aj30sg0lcjt1.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8eslw12dj30sg0lc412.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8etqyetmj30sg0lc40i.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8euvlbxgj30sg0lctc6.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ewfahsmj30sg0lc12s.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8f84gzxlj30sg0lc10w.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8f8ynpyrj30sg0lcjty.jpg"
+  # ]
+  #
+  # image4 = [
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8fr2671zj318g0xc0wh.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8egva0wdj30sg0lctjr.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8en1ci1pj30sg0lcahf.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8ekrvn36j30sg0lcdph.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8eihjtcuj30sg0lcdmg.jpg",
+  #   "https://ws2.sinaimg.cn/large/006tNbRwgy1fg8ep5efdjj30sg0ka7gj.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8eqpn8ecj30sg0lcq4t.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8esjv9l5j30sg0lcgnt.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8etqllwtj30sg0lcgnm.jpg",
+  #   "https://ws4.sinaimg.cn/large/006tNbRwgy1fg8euu17goj30sg0lc3z9.jpg",
+  #   "https://ws1.sinaimg.cn/large/006tNbRwgy1fg8ew8y97zj30sg0lctij.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8f7t1un2j30sg0lctgg.jpg",
+  #   "https://ws3.sinaimg.cn/large/006tNbRwgy1fg8f8x616gj30sg0lcgoq.jpg"
+  # ]
+  #
+  # create_photos = for i in 0..12 do
+  #   Photo.create!(product_id: (i+1),avatar: open(image1[i]))
+  #   Photo.create!(product_id: (i+1),avatar: open(image2[i]))
+  #   Photo.create!(product_id: (i+1),avatar: open(image3[i]))
+  #   Photo.create!(product_id: (i+1),avatar: open(image4[i]))
+  # end
+  #
+  # puts "13 photos created."
