@@ -6,7 +6,7 @@ body {
    height: 200px;
    margin: 40px;     /*商品距离*/
    float: left;
-   border: 6px solid #fff;    /*商品缩略图边框距离*/
+   border: 9px solid #fff;    /*商品缩略图边框距离*/
    overflow: hidden;        /*商品缩略图溢出隐藏*/
    position: relative;
    text-align: center;
