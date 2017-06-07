@@ -16,18 +16,18 @@ class AvatarUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process resize_to_fill: [800,800]      # 默认上传的图片被减成800*800
+  process resize_to_limit: [800,800]      # 默认上传的图片被减成800*800
 
   version :thumb do                 # 自己重新定义图片大小，方便后面引用
-    process resize_to_fill: [300,200]
+    process resize_to_limit: [300,250]
   end
 
   version :medium do
-    process resize_to_fill: [400,400]
+    process resize_to_limit: [400,400]
   end
 
   version :small do
-    process resize_to_fill: [80,80]
+    process resize_to_limit: [80,80]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

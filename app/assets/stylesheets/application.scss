@@ -40,13 +40,13 @@ html {
   width:400px;
 }
 .show-photo-xsmall-box.nav-tabs {
-  margin-top: 15px;
+  margin-top: 0px;
   border-bottom: 0px;
 }
 
 .show-photo-xsmall-box.nav-tabs li {
-  width: 18%;
-  margin-right: 2.5%;
+  width: 17%;
+  margin-right: 10%;
 }
 .show-photo-xsmall-box.nav-tabs li a {
   padding: 0;
@@ -126,6 +126,15 @@ html {
 .dropdown-menu li a:hover {
     background-color: gray !important;
 }
+
+
+// <!--距导航栏 -->
+
+.undlenavbar  {
+  padding-top: 50px;
+}
+
+
 
  // <!--表格上下居中 -->
 
