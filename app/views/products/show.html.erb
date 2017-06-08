@@ -26,14 +26,7 @@
     <h2> <%= @product.title %></h2>
     <div> 库存 : <%= @product.quantity %> 辆</div>
     <div class="product-price"> $: <%= @product.price %></div>
-    <!-- <div>
-      <p>
-        <span>购买数量：</span>
-        <%= link_to("-", "", id: "quantity-minus", class: "quantity-minus btn btn-default disabled") %>
-        <input type="text" name="quantity" value="1" id="quantity-input" class="quantity-input">
-        <%= link_to("+", "", id: "quantity-plus", class: "quantity-plus btn btn-default #{@product.quantity <= 1 ? 'disabled' : ''}") %>
-      </p>
-    </div> -->
+
     <div class="pull-center">
       <% if @product.quantity.present? && @product.quantity > 0 %>
        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
@@ -65,6 +58,9 @@
         <div id="menu2" class="tab-pane fade">
             <h2>专机运输,用心呵护</h2>
             <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvcx0p4p7j30sg0g0aaw.jpg" width="700" height="400"> </img>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            <h2>评论</h2>
         </div>
    </div>
 </div>

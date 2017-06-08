@@ -1,34 +1,16 @@
-
-      <h2>订单列表 </h2>
-<div class="col-md-10 col-md-offset-1" >
-    <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th style="text-align:center;vertical-align:middle;">商品资讯</th>
-            <th style="text-align:center;vertical-align:middle;">产品名称</th>
-            <th style="text-align:center;vertical-align:middle;">单价</th>
-            <th style="text-align:center;vertical-align:middle;">数量</th>
-            <th style="text-align:center;vertical-align:middle;">生成时间</th>
-          </tr>
-        </thead>
-        <tbody>
-        <% current_cart.cart_items.each do |cart_item| %>
-        <% @orders.each do |order| %>
-        <tr>
-          <td style="text-align:center;vertical-align:middle;">
-              <%= image_tag(cart_item.product.image.thumb.url, size:"200x150") %>
-          </td>
-          <td style="text-align:center;vertical-align:middle;">
-            <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
-          </td>
-          <td style="text-align:center;vertical-align:middle;">
-            <%= cart_item.product.price %>
-          </td>
-          <td style="text-align:center;vertical-align:middle;"> <%= link_to(order.id, order_path(order.token)) %> </td>
-          <td style="text-align:center;vertical-align:middle;"> <%= order.created_at.to_s(:long) %> </td>
-        </tr>
-          <% end %>
-        <% end %>
-      </tbody>
-    </table>
+<h2 class="text-center">订单列表 </h2>
+<div class="col-md-8 col-md-offset-3">
+<% @orders.each do |order| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <tr>
+        <td> <%= order.created_at.strftime("%Y-%m-%d") %></td>
+        <td>订单号：</td>
+      </tr>
+    </div>
+    <div class="panel-body">
+      <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
+    </div>
   </div>
+<% end %>
+</div>
