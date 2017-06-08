@@ -1,46 +1,48 @@
-<div class="col-md-12" style="text-align:center">
-  <h3> 商品列表 </h3>
-</div>
-  <div class="pull-right" style="padding-bottom: 20px;">
-    <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
+<div class="undlenavbar">
+  <div class="col-md-12" style="text-align:center">
+    <h3> 商品列表 </h3>
   </div>
-  <table class="table table-bordered" >
-    <thead>
-      <tr style="background-color:#1f1f1f; color:white;" >
-        <th class="td">序号</th>
-        <th class="td">产品图片</th>
-        <th class="td" >产品名称</th>
-        <th class="td">售价</th>
-        <th class="td"> 操作选项 </th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @products.each do |product| %>
-      <tr>
-        <td class="td">
-          <%= product.id %>
-        </td>
-        <td class="td" width="200px">
-          <%= link_to product_path(product) do %>
-          <%= image_tag(product.photos[0].avatar.thumb.url, :size => "200x130") %>
-          <% end %>
-        </td>
-        <td class="td">
-          <%= product.title %>
-        </td>
-        <td class="td">
-          <%= product.price %>
-        </td>
-        <td class="td">
-          <%= link_to edit_admin_product_path(product) do %>
-          <i class="fa fa-pencil"></i>
-          <% end %>
-          &nbsp &nbsp
-          <%= link_to admin_product_path(product), method: :delete do %>
-          <i class="fa fa-trash"></i>
-          <% end %>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <div class="pull-right" style="padding-bottom: 20px;">
+      <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
+    </div>
+    <table class="table table-bordered" >
+      <thead>
+        <tr style="background-color:#1f1f1f; color:white;" >
+          <th class="td">序号</th>
+          <th class="td">产品图片</th>
+          <th class="td" >产品名称</th>
+          <th class="td">售价</th>
+          <th class="td"> 操作选项 </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+        <tr>
+          <td class="td">
+            <%= product.id %>
+          </td>
+          <td class="td" width="200px">
+            <%= link_to product_path(product) do %>
+            <%= image_tag(product.photos[0].avatar.thumb.url, :size => "200x130") %>
+            <% end %>
+          </td>
+          <td class="td">
+            <%= product.title %>
+          </td>
+          <td class="td">
+            <%= product.price %>
+          </td>
+          <td class="td">
+            <%= link_to edit_admin_product_path(product) do %>
+            <i class="fa fa-pencil"></i>
+            <% end %>
+            &nbsp &nbsp
+            <%= link_to admin_product_path(product), method: :delete do %>
+            <i class="fa fa-trash"></i>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
