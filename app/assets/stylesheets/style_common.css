@@ -1,12 +1,12 @@
-body {
+/*body {
   padding-top: 50px;
-}
+}*/
 .view {
    width: 300px;      /*商品图片尺寸*/
    height: 200px;
    margin: 40px;     /*商品距离*/
    float: left;
-   border: 6px solid #fff;    /*商品缩略图边框距离*/
+   border: 9px solid #fff;    /*商品缩略图边框距离*/
    overflow: hidden;        /*商品缩略图溢出隐藏*/
    position: relative;
    text-align: center;
@@ -51,9 +51,9 @@ body {
    background: #000;
    color: #fff;
    text-transform: uppercase;
-   -webkit-box-shadow: 0 0 1px #000;
+   -webkit-box-shadow: 0 0 1px #1f1f1f;
    -moz-box-shadow: 0 0 1px #000;
-   box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #1f1f1f;
 }
 /*.view a.info: hover {
    -webkit-box-shadow: 0 0 5px #000;

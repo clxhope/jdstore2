@@ -29,7 +29,6 @@ html {
    /* Margin bottom by footer height */
    margin-bottom: 100px;
    font: 400 15px/1.8 Lato, sans-serif;
-   color: #777;
  }
 
  /*--------商品展示页多图-------*/
@@ -41,13 +40,13 @@ html {
   width:400px;
 }
 .show-photo-xsmall-box.nav-tabs {
-  margin-top: 15px;
+  margin-top: 0px;
   border-bottom: 0px;
 }
 
 .show-photo-xsmall-box.nav-tabs li {
-  width: 18%;
-  margin-right: 2.5%;
+  width: 17%;
+  margin-right: 10%;
 }
 .show-photo-xsmall-box.nav-tabs li a {
   padding: 0;
@@ -59,24 +58,16 @@ html {
 
 /*-----注册登陆页面------*/
  .login{
-   background-image: url("http://ww1.sinaimg.cn/large/006tKfTcgy1ffvfnjcmfvj31kw192atl.jpg");
-   background-size: cover;
-   background-position: top center;
+   background-image: url("https://ww3.sinaimg.cn/large/006tNbRwgy1fg0bbjna43j30sg0lcgmh.jpg");
+   background-size: 100% 140%;
+   background-position:  center;
+   padding-top: 250px;
+   padding-bottom: 140px;
  }
-
 
  h2.signin{
    margin-bottom: 30px;
  }
-
-
-/*-------块居中---------*/
- .content1{
-              background: #ffffff;
-              text-align: right;
-}
-
-
 
 
  // <!--navbar -->
@@ -129,11 +120,45 @@ html {
 }
 
 
+// <!--距导航栏 -->
+
+.undlenavbar  {
+  padding-top: 50px;
+}
+
+
+
+ // <!--表格上下居中 -->
+
+.th  {
+    text-align: center;
+    vertical-align: middle;
+}
+ // <!--go top -->
+#gotop{
+  width: 48%;
+  height: 80px;
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+  cursor: pointer;
+  // display:  none;
+
+  span {
+      color: #ffffff;
+      font-size: 40px;
+      position:absolute;
+      top: 8px;
+      left: 8px;
+  }
+
+}
+
  // <!--footer -->
 .footer {
     background-color: #000;
     color: #f5f5f5;
-    padding: 0px;
+    padding: 5px;
     position: absolute;
     bottom: 0;
     width: 100%;

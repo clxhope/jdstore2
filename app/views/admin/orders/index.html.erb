@@ -1,22 +1,26 @@
-<h2>订单列表</h2>
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>生成时间</th>
-      <th>订购者</th>
-      <th>订单状态</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @orders.each do |order| %>
-    <tr>
-      <td> <%= link_to(order.id, admin_order_path(order) ) %> </td>
-      <td> <%= order.created_at.to_s(:long) %> </td>
-      <td> <%= order.user.email %></td>
-      <td> <%= order.aasm_state %></td>
-    </tr>
-    <% end %>
+<div class="undlenavbar">
+  <div class="col-md-12" style="text-align:center">
+    <h3>订单列表</h3>
+  </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr style="background-color:#1f1f1f; color:white;" >
+          <th class="td">序号</th>
+          <th class="td">生成时间</th>
+          <th class="td">订购者</th>
+          <th class="td">订单状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @orders.each do |order| %>
+        <tr>
+          <td class="td"> <%= link_to(order.id, admin_order_path(order) ) %> </td>
+          <td class="td"> <%= order.created_at.to_s(:long) %> </td>
+          <td class="td"> <%= order.user.email %></td>
+          <td class="td"> <%= order.aasm_state %></td>
+        </tr>
+        <% end %>
 
-  </tbody>
-</table>
+      </tbody>
+    </table>
+</div>

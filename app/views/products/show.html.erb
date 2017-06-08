@@ -1,66 +1,77 @@
 <br>
-<div class="col-md-6 col-md-offset-2">
-  <% if @product.photos.present? %>
-   <div class="tab-content show-picture">
-     <% @product.photos.each_with_index do |p,index| %>
-       <% if index <5 %>
-        <div class= "tab-pane <%= render_active(index) %>" id="<%= index %>"><%= image_tag p.avatar.medium.url %>
-        </div>
-       <% end %>
-     <% end %>
+
+<div class="undlenavbar">
+  <div class="col-md-8 col-md-offset-2">
+          <div class="panel panel-default">
+               <div class="panel-heading" style="background-color:#1f1f1f; color:white;">
+                 <h3 class="text-center">商品展示</h3>
+               </div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <% if @product.photos.present? %>
+                     <div class="tab-content show-picture">
+                       <% @product.photos.each_with_index do |p,index| %>
+                         <% if index <5 %>
+                          <div class= "tab-pane <%= render_active(index) %>" id="<%= index %>"><%= image_tag p.avatar.medium.url,class:"thumbnail" %>
+                          </div>
+                         <% end %>
+                       <% end %>
+                     </div>
+                   <ul class="show-photo-xsmall-box nav nav-tabs">
+                     <% @product.photos.each_with_index do |p,index| %>
+                       <% if index <5 %>
+                         <li><a href="#<%= index %>" data-toggle="tab"><%= image_tag p.avatar.small.url%></a></li>
+                       <% end %>
+                     <% end %>
+                   </ul>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/400x400&text=No Pic",class:"thumbnail") %>
+                  <% end %>
+                </div><br><br><br>
+                <div class="col-md-4 col-md-offset-3">
+                  <h2> <%= @product.title %></h2>
+                  <div> 库存 : <%= @product.quantity %> 辆</div>
+                  <div class="product-price"> $: <%= @product.price %></div>
+                  <div class="pull-center">
+                    <% if @product.quantity.present? && @product.quantity > 0 %>
+                     <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-md btn-danger") %>
+                     <% else %>
+                       已销售一空，无法购买
+                     <% end %>
+                     <%= link_to("直接购买", checkout_carts_path, method: :post, class: "btn btn-md btn-default") %>
+               </div>
+             </div>
+          </div>
+       </div>
    </div>
 
-   <ul class="show-photo-xsmall-box nav nav-tabs">
-     <% @product.photos.each_with_index do |p,index| %>
-       <% if index <5 %>
-         <li><a href="#<%= index %>" data-toggle="tab"><%= image_tag p.avatar.small.url%></a></li>
-       <% end %>
-     <% end %>
-   </ul>
-  <% else %>
-    <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
-  <% end %>
-</div>
-
-  <br><br><br>
-    <h2> <%= @product.title %></h2>
-    <div> 库存 : <%= @product.quantity %> 辆</div>
-    <div class="product-price"> $: <%= @product.price %></div>
-
-    <div class="pull-center">
-      <% if @product.quantity.present? && @product.quantity > 0 %>
-       <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
-       <% else %>
-         已销售一空，无法购买
-       <% end %>
-       <%= link_to("直接购买", checkout_carts_path, method: :post, class: "btn btn-lg btn-default") %>
-   </div>
-
-
-<div class="col-md-6 col-md-offset-3">
-      <h3 class="text-center">商品叙述/配送服务</h3>
-        <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">资讯</a></li>
-            <li><a data-toggle="tab" href="#menu1">参数</a></li>
-            <li><a data-toggle="tab" href="#menu2">配送说明</a></li>
-        </ul>
-
-  <div class="tab-content">
-     <div id="home" class="tab-pane fade in active">
-        <h2>车况概览</h2>
-        <p><%= @product.description %></p>
-     </div>
-        <div id="menu1" class="tab-pane fade">
-          <h2>参数配置</h2>
-          <p>工程修复中,敬请谅解！</p>
-          <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvdwc6h04j30rs0j3t9j.jpg" width="700" height="500"> </img>
+   <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+             <div class="panel-heading" style="background-color:#1f1f1f; color:white;">
+                <h3 class="text-center">商品概况/配送服务</h3>
+            </div>
+          <div class="panel-body">
+              <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#home">资讯</a></li>
+                  <li><a data-toggle="tab" href="#menu1">参数</a></li>
+                  <li><a data-toggle="tab" href="#menu2">配送说明</a></li>
+              </ul>
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active"  style="text-align:center">
+                <h2>车况概览</h2>
+                <p><%= @product.description %></p>
+             </div>
+              <div id="menu1" class="tab-pane fade" style="text-align:center">
+                <h2>参数配置</h2>
+                <p style="text-align:left">工程修复中,敬请谅解！</p>
+                <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvdwc6h04j30rs0j3t9j.jpg" width="700" height="500"> </img>
+              </div>
+             <div id="menu2" class="tab-pane fade" style="text-align:center">
+                <h2>专机运输,用心呵护</h2>
+                <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvcx0p4p7j30sg0g0aaw.jpg" width="700" height="400"> </img>
+             </div>
+           </div>
         </div>
-        <div id="menu2" class="tab-pane fade">
-            <h2>专机运输,用心呵护</h2>
-            <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1ffvcx0p4p7j30sg0g0aaw.jpg" width="700" height="400"> </img>
-        </div>
-        <div id="menu3" class="tab-pane fade">
-            <h2>评论</h2>
-        </div>
+      </div>
    </div>
 </div>

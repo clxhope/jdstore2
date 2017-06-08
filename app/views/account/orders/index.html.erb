@@ -1,16 +1,20 @@
-<h2 class="text-center">订单列表 </h2>
-<div class="col-md-8 col-md-offset-3">
-<% @orders.each do |order| %>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <tr>
-        <td> <%= order.created_at.strftime("%Y-%m-%d") %></td>
-        <td>订单号：</td>
-      </tr>
-    </div>
-    <div class="panel-body">
-      <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
-    </div>
+<div class="undlenavbar">
+  <div class="col-md-12" style="text-align:center">
+    <h3> 订单列表 </h3>
   </div>
-<% end %>
+  <div class="col-md-8 col-md-offset-2">
+    <% @orders.each do |order| %>
+      <div class="panel panel-default">
+        <div class="panel-heading" style="background-color:#1f1f1f; color:white;">
+          <tr>
+            <td> <%= order.created_at.strftime("%Y-%m-%d") %></td>
+            <td>订单号：</td>
+          </tr>
+        </div>
+        <div class="panel-body">
+          <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
