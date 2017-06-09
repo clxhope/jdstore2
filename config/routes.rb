@@ -40,7 +40,11 @@ resources :orders do
 end
 
 namespace :account do
-  resources :orders
+  resources :orders do
+    member do
+      post :comment
+    end
+  end
 end
 
 end
