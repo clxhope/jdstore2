@@ -23,7 +23,11 @@
           </td>
           <td class="td" width="200px">
             <%= link_to product_path(product) do %>
-            <%= image_tag(product.photos[0].avatar.thumb.url, :size => "200x130") %>
+              <% if product.photos.empty? %>
+                <%= image_tag("http://placehold.it/400x400&text=No Pic", :size => "200x130") %>
+              <% else %>
+                <%= image_tag(product.photos[0].avatar.thumb.url, :size => "200x130") %>
+              <% end %>
             <% end %>
           </td>
           <td class="td">

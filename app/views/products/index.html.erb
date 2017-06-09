@@ -12,7 +12,11 @@
               <% @products.each do |product| %>
                 <div class="col-md-4">
                   <div class="view view-third">
-                    <%= image_tag(product.photos[0].avatar.thumb.url) %>
+                    <% if product.photos.empty? %>
+                      <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                    <% else %>
+                      <%= image_tag(product.photos[0].avatar.thumb.url) %>
+                    <% end %>
                       <div class="mask">
                         <h2> <%= product.title %> </h2><br>
                         <p>  $:<%= product.price %> </p>
