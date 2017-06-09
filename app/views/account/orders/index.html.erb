@@ -13,7 +13,7 @@
         </div>
         <div class="panel-body">
           <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
-          <td> <%= link_to("评论", "#") %></td>
+          <td> <%= link_to("评论", new_account_order_path(order)) %></td>
         </div>
       </div>
     <% end %>
