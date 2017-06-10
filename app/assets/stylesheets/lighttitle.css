@@ -7,7 +7,7 @@
   left: 100px;
   color: #adadad;
   z-index: 1;
-  animation: shadow 5.0s ease-in-out infinite;
+  animation: shadow 15.0s ease-in-out infinite;
 }
 
 .noor {
@@ -22,7 +22,7 @@
     background:
       -webkit-radial-gradient(center, ellipse cover, #fff 0%, rgba(255, 255, 255, 0.2) 100%);
      box-shadow: 0px 0px 50px #fff;
-    animation: noor 5.0s ease-in-out infinite;
+    animation: noor 20.0s ease-in-out infinite;
 }
 
 .two {z-index: 2;opacity: 0.8;}
