@@ -12,8 +12,28 @@
           </tr>
         </div>
         <div class="panel-body">
-          <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
-          <td> <%= link_to("评论", new_account_order_path(order)) %></td>
+          <table class="table" >
+              <tr>
+                <th >商品明细</th>
+                <th>金额</th>
+                <th>数量</th>
+                <th>更多详情</th>
+              </tr>
+              <% current_cart.cart_items.each do |cart_item| %>
+              <tr>
+                <td>
+                  <%= image_tag(cart_item.product.photos[0].avatar.thumb.url,:size => "200x130")  %>
+                </td>
+                <td>
+                  <%= cart_item.product.price %>
+                </td>
+                <td>
+                  <%= cart_item.quantity %>
+                </td>
+                <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
+              </tr>
+              <% end %>
+          </table>
         </div>
       </div>
     <% end %>
