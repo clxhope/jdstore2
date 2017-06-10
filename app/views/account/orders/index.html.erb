@@ -19,20 +19,20 @@
                 <th>数量</th>
                 <th>更多详情</th>
               </tr>
-              <% current_cart.cart_items.each do |cart_item| %>
+
               <tr>
                 <td>
-                  <%= image_tag(cart_item.product.photos[0].avatar.thumb.url,:size => "200x130")  %>
+                  商品明细
                 </td>
                 <td>
-                  <%= cart_item.product.price %>
+                  金额
                 </td>
                 <td>
-                  <%= cart_item.quantity %>
+                  数量
                 </td>
                 <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
               </tr>
-              <% end %>
+
           </table>
         </div>
       </div>

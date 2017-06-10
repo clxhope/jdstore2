@@ -31,7 +31,7 @@
                 <div class="col-md-4 col-md-offset-3">
                   <h2> <%= @product.title %></h2>
                   <div> 库存 : <%= @product.quantity %> 辆</div>
-                  <div class="product-price"> $: <%= @product.price %></div>
+                  <div class="product-price"> <i class="fa fa-usd" aria-hidden="true"></i> <%= @product.price %></div>
                   <div class="pull-center">
                     <% if @product.quantity.present? && @product.quantity > 0 %>
                      <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-md btn-danger") %>
