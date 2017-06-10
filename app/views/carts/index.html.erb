@@ -26,10 +26,10 @@
           <tr>
             <td>
               <%= link_to product_path(cart_item.product) do %>
-              <% if product.photos.empty? %>
+              <% if cart_item.product.photos.empty? %>
               <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
             <% else %>
-              <%= image_tag(product.photos[0].avatar.thumb.url) %>
+              <%= image_tag(cart_item.product.photos[0].avatar.thumb.url) %>
               <% end %>
               <% end %>
             </td>

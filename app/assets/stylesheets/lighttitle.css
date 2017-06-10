@@ -1,0 +1,41 @@
+
+.content {position: relative;width: 750px;margin: 0 auto;left: -30px;}
+
+.klam {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  color: #adadad;
+  z-index: 1;
+  animation: shadow 15.0s ease-in-out infinite;
+}
+
+.noor {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 140px;
+    height: 140px;
+    opacity: 0.8;
+    border-radius: 100px;
+    z-index: 0;
+    background:
+      -webkit-radial-gradient(center, ellipse cover, #fff 0%, rgba(255, 255, 255, 0.2) 100%);
+     box-shadow: 0px 0px 50px #fff;
+    animation: noor 20.0s ease-in-out infinite;
+}
+
+.two {z-index: 2;opacity: 0.8;}
+
+@-webkit-keyframes noor {
+    0% {left: 45px;}
+    50% {left: 335px;}
+    75%{left:500px;}
+    100% {left: 45px;}
+}
+
+@-webkit-keyframes shadow {
+  0% {text-shadow: -9px 1px 4px #000;}
+  50% {text-shadow: 9px 1px 4px #000; }
+  100% {text-shadow: -9px 1px 4px #000;}
+}
