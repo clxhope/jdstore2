@@ -53,11 +53,11 @@
                     <%= simple_form_for @order do |f| %>
                     <legend> 订购人 </legend>
                 <div class="form-group col-lg-4">
-                  <%= f.input :billing_name,label:"订购人" %>
+                <%= f.input :billing_name, placeholder: '请输入订购人姓名', input_html: {value: current_user.name}, :label => '订购人'  %>
                 </div>
 
                 <div class="form-group col-lg-4">
-                  <%= f.input :billing_address,label:"订购地址" %>
+                 <%= f.input :billing_address, placeholder: '请输入订购人通讯地址', input_html: {value: current_user.address}, :label => '通讯地址'  %>
                 </div>
 
                     <legend> 收货人 </legend>
