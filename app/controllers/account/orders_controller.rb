@@ -5,8 +5,11 @@ class Account::OrdersController < ApplicationController
     @orders = current_user.orders.order("id DESC")
   end
 
-  def new
-    @order = Order.new
+  def show
+    @order = Order.find_by_token(params[:id])
+    @product_lists = @order.product_lists
+    @product = Product.find(params[:id])
+    @photos = @product.photos.all
   end
 
 end
