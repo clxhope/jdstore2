@@ -48,8 +48,18 @@ namespace :account do
 end
 
 resources :groups do
+      member do
+      post :join
+      post :quit
+    end
   resources :posts
  end
+
+ namespace :account do
+   resources :groups
+   resources :posts
+ end
+
  root 'groups#index'
 
 
