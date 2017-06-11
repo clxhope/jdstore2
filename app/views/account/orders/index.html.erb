@@ -12,22 +12,25 @@
           </tr>
         </div>
         <div class="panel-body">
-          <table class="table table-bordered">
-          <tbody>
-          <% order.product_lists.each do |product_list| %>
-            <tr>
-              <td>
-                <%= link_to(product_list.product_name, product_path(product_list)) %>
-              </td>
-              <td>$<%= product_list.product_price %></td>
-              <td><%= product_list.quantity %></td>
-            </tr>
-          <% end %>
-          </tbody>
-          </table>
-          <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
+          <table class="table" >
+            <% order.product_lists.each do |product_list| %>
+              <tr>
+                <td>
+                  <%= link_to(product_list.product_name, product_path(product_list)) %>
+                </td>
+                <td>
+                  <td>$<%= product_list.product_price %></td>
+                </td>
+                <td>
+                  <%= product_list.quantity %>
+                </td>
 
-          <td> <%= link_to("评论", ) %></td>
+                <td> <%= link_to("订单详情", order_path(order.token)) %> </td>
+                <td> <%= link_to("评价", "#" ) %></td>
+              </tr>
+            <% end %>
+               $<%= order.total %>
+          </table>
 
         </div>
       </div>

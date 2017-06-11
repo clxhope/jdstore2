@@ -1,5 +1,6 @@
 <link rel="stylesheets" type="text/css" href="style_common.css" />
 <div class="undlenavbar">
+  <br>
   <div class="col-md-10 col-md-offset-1" >
       <div class="panel panel-default">
           <div class="panel-heading">
@@ -19,7 +20,7 @@
                     <% end %>
                       <div class="mask">
                         <h2> <%= product.title %> </h2><br>
-                        <p>  $:<%= product.price %> </p>
+                        <p>  <i class="fa fa-usd" aria-hidden="true"></i><%= product.price %> </p>
                      <%= link_to("查看详情",  product_path(product),  :class => "info") %>
                       </div>
                   </div>

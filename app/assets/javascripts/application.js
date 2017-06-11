@@ -68,3 +68,10 @@ $(window).scroll(function () {
     $('#gotop').fadeOut() // 否则慢慢地隐藏「回到顶部按钮」
   }
 })
+
+
+
+//霓虹字//
+$('[data-text]').on('keyup', function(){
+  $(this).attr('data-text', $(this).text());
+});
