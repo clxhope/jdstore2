@@ -1,0 +1,32 @@
+<div class="undlenavbar">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel" style="background-color:#1f1f1f; color:white;">
+        <h2 class="text-center"> 我发起的资讯 </h2>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th> # </th>
+            <th> Title </th>
+            <th> Description </th>
+            <th> Post Count </th>
+            <th> Last Update </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @groups.each do |group| %>
+            <tr>
+              <td> # </td>
+              <td><%= link_to(group.title, group_path(group)) %></td>
+              <td><%= render_group_description(group) %></td>
+              <td> <%= group.posts.count %> </td>
+              <td> <%= group.updated_at %> </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

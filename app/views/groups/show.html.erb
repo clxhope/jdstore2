@@ -1,0 +1,46 @@
+<div class="undlenavbar">
+  <div class="col-md-10 col-md-offset-1 group">
+    <span class="pull-right">
+      <% if current_user && current_user.is_member_of?(@group) %>
+        <label class="label label-success"> 加入资讯讨论 </label>
+         <%= link_to("Quit Group", quit_group_path(@group), method: :post, class: "btn btn-default") %>
+      <% else %>
+        <label class="label label-warning"> 未加入此资讯讨论 </label>
+         <%= link_to("Join Group", join_group_path(@group), method: :post, class: "btn btn-default") %>
+      <% end %>
+      </span>
+        <%= link_to("Write a Post", new_group_post_path(@group), class: "btn btn-default pull-right")%>
+        <% if current_user && current_user == @group.user %>
+        <%= link_to("Edit",edit_group_path(@group), class: "btn btn-primary pull-right") %>
+        <% end %>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel" style="background-color:#1f1f1f; color:white; text-align:center">
+      <h2 ><%= @group.title %></h2>
+    </div>
+      <p><%= @group.description %></p>
+        <table class="table">
+        <thead>
+         <tr>
+            <th>资讯内容</th>
+            <th>发起者</th>
+            <th>发表时间</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @posts.each do |post| %>
+            <tr>
+              <td><%= post.content %></td>
+              <td><%= post.user.email %></td>
+              <td><%= post.created_at %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="text-center">
+      <%= will_paginate @posts %>
+      </div>
+    </div>
+  </div>
+</div>
