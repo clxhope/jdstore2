@@ -21,7 +21,6 @@ resources :products do
   member do
     post :add_to_cart
   end
-  resources :comments
 end
 
 resources :carts do
@@ -39,6 +38,7 @@ resources :orders do
     post :pay_with_wechat
     post :apply_to_cancel
   end
+  resources :comments
 end
 
 namespace :account do
